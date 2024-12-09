@@ -50,6 +50,25 @@
         }
     </script>
 
+    <script>
+        var language; 
+        function getLanguage() {
+            (localStorage.getItem('language') == null) ? setLanguage('en') : false;
+                $.ajax({ 
+                url:  '/language/' +  localStorage.getItem('language') + '.json', 
+                dataType: 'json', async: false, dataType: 'json', 
+                success: function (lang) { language = lang } });
+        }
+    
+        function setLanguage(lang) {
+            localStorage.setItem('language', lang);
+        }
+        
+        $(document).ready(function(){
+            $('#lang-slxn').text(language.lang);
+        });
+    </script>
+
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
@@ -80,6 +99,7 @@
                             <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>
                         </ul>
                         <ul class="member-actions">
+                            <li><a href="#lang-slxn"></a></li>
                             <li><a href="#map" class="login">Venue</a></li>
                             <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
                         </ul>
