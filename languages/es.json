@@ -1,10 +1,9 @@
 {
-    "how_we_met": "Cómo nos conocimos",
+    "intro": "Beinvenidos",
     "events": "Eventos",
     "instagram": "Instagram",
     "engagement": "Compromiso", 
-    "glimpse_of_city": "Vistazo de la ciudad",
     "venue": "Lugar",
-    "rsvp": "Confirmar asistencia",
-    "language_toggle": "View in English"
+    "rsvp": "RSVP",
+    "language_toggle": "English"
 }

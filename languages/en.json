@@ -1,10 +1,9 @@
 {
-    "how_we_met": "How we met",
+    "intro": "Welcome!",
     "events": "Events",
     "instagram": "Instagram", 
     "engagement": "Engagement",
-    "glimpse_of_city": "Glimpse of the city",
     "venue": "Venue",
     "rsvp": "RSVP",
-    "language_toggle": "Ver en Español"
+    "language_toggle": "Español"
 }
