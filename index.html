@@ -48,6 +48,51 @@
                 document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
             }
         }
+
+        // Internationalization script
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageToggle = document.getElementById('language-toggle');
+            const elements = document.querySelectorAll('[data-i18n]');
+
+            // Load language function
+            async function loadLanguage(language) {
+                try {
+                    // Fetch translations from JSON files
+                    const response = await fetch(`languages/${language}.json`);
+                    const translations = await response.json();
+
+                    // Update page elements
+                    elements.forEach(element => {
+                        const key = element.getAttribute('data-i18n');
+                        if (translations[key]) {
+                            element.textContent = translations[key];
+                        }
+                    });
+
+                    // Update language toggle button text from JSON
+                    languageToggle.textContent = translations['language_toggle'];
+
+                    // Update html lang attribute
+                    document.documentElement.lang = language;
+                    
+                    // Store selected language in localStorage
+                    localStorage.setItem('selectedLanguage', language);
+                } catch (error) {
+                    console.error('Error loading language:', error);
+                }
+            }
+
+            // Toggle language on click
+            languageToggle.addEventListener('click', function() {
+                const currentLanguage = document.documentElement.lang;
+                const newLanguage = currentLanguage === 'en' ? 'es' : 'en';
+                loadLanguage(newLanguage);
+            });
+
+            // Load previously selected language or default to English
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            loadLanguage(savedLanguage);
+        });
     </script>
 
     <link rel="stylesheet" href="css/normalize.min.css">
@@ -73,10 +118,10 @@
                 <div class="header-nav">
                     <nav>
                         <ul class="primary-nav">
-                            <li><a href="#intro">How we met</a></li>
-                            <li><a href="#events">Events</a></li>
-                            <li><a href="#instagram">Instagram</a></li>
-                            <li><a href="#eng-pics">Engagement</a></li>
+                            <li><a href="#intro" data-i18n="how_we_met">How we met</a></li>
+                            <li><a href="#events" data-i18n="events">Events</a></li>
+                            <li><a href="#instagram" data-i18n="instagram">Instagram</a></li>
+                            <li><a href="#eng-pics" data-i18n="engagement">Engagement</a></li>
                             <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>
                         </ul>
                         <ul class="member-actions">
@@ -84,6 +129,11 @@
                             <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
                         </ul>
                     </nav>
+                                        
+                    <!-- Language Toggle -->
+                    <div class="language-selector">
+                        <span id="language-toggle" class="language-toggle">Español</span>
+                    </div>
                 </div>
                 <div class="navicon">
                     <a class="nav-toggle" href="#"><span></span></a>
