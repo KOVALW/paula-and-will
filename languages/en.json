@@ -7,5 +7,6 @@
     "rsvp": "RSVP",
     "language_toggle": "Español",
     "city": "Tepoztlán",
-    "city-description": "Magic town"
+    "city-description": "Magic town",
+    "welcome": "Hi there, the text works!"
 }
