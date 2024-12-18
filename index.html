@@ -53,6 +53,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             const languageToggle = document.getElementById('language-toggle');
             const elements = document.querySelectorAll('[data-i18n]');
+            const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+
 
             // Load language function
             async function loadLanguage(language) {
@@ -66,6 +68,13 @@
                         const key = element.getAttribute('data-i18n');
                         if (translations[key]) {
                             element.textContent = translations[key];
+                        }
+                    });
+                    // Add placeholder translations
+                    placeholderElements.forEach(element => {
+                        const key = element.getAttribute('data-i18n-placeholder');
+                        if (translations[key]) {
+                            element.placeholder = translations[key];
                         }
                     });
 
@@ -513,7 +522,7 @@
                             <div class="form-input-group">
                                 <i class="fa fa-key"></i><input type="name" name="invite_code" id="invite_code"
                                                                 class=""
-                                                                placeholder="Leave a message">
+                                                                data-i18n-placeholder="rsvp_message">
                             </div>
                         </div>
                     </div>
