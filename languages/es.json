@@ -7,9 +7,13 @@
     "rsvp": "RSVP",
     "language_toggle": "English",
     "city": "Tepoztlán",
-    "city-description": "Pueblo Mágico",
+    "city_description": "Pueblo Mágico",
     "welcome": "Hola! El Botoncito funciona",
     "announcement": "¡Nos vamos a casar!",
     "date": "Todavia no decidimos la fecha, pero probablemente nos casamos en la primavera de 2026. Tu presencia nos encantaria!",
-    "rsvp_message": "¡Dejanos un mensaje!"
+    "rsvp_message": "¡Dejanos un mensaje!",
+    "name": "Nombre",
+    "guests": "Número de invitados",
+    "rsvp_header": "Nos encantaria verlos!",
+    "rsvp_tagline": "Por favor, deje el RSVP para que podamos planear con anticipacion. Los datos de esta forma estan seguros y solamente metense a nuestro Google Sheet!"
 }

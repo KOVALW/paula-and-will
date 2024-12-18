@@ -7,9 +7,13 @@
     "rsvp": "RSVP",
     "language_toggle": "Español",
     "city": "Tepoztlán",
-    "city-description": "Magic town",
+    "city_description": "Magic town",
     "welcome": "Hi there, the text works!",
     "announcement": "We're getting married!",
     "date": "No date yet but we're aiming for Spring 2026. We'd love for you to make it!",
-    "rsvp_message": "Leave us a message!"
+    "rsvp_message": "Leave us a message!",
+    "name": "Name",
+    "guests": "Number of guests",
+    "rsvp_header": "We're so excited to have you!",
+    "rsvp_tagline": "It means so much to have you all there. Kindly RSVP so we can plan accordingly. This data just goes to our Google Sheet, no third party involved!"
 }

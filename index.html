@@ -19,8 +19,8 @@
     <meta property="og:image" content="kovalw.github.io/paula-and-will/img/hero-min.jpg">
     <meta property="og:type" content="website">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/vlinw_117x71.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/vlinw_78x42.png">
     <link rel="manifest" href="manifest.json">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
@@ -419,8 +419,8 @@
          data-property="{videoURL:'https://www.youtube.com/watch?v=Wa1yCs9OvKQ',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:8, stopAt:200, opacity:1}">
     </div>
     <div id="video-content">
-        <h5>Tepoztlán</h5>
-        <p>Pueblo Mágico</p>
+        <h5 data-i18n="city">Tepoztlán</h5>
+        <p data-i18n="city_description"></p>
     </div>
 </section>
 
@@ -488,8 +488,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <h3>What are you waiting for?</h3>
-                <p>We would greatly appreciate if you could RSVP before 1st of November '17</p>
+                <h3 data-i18n="rsvp_header"></h3>
+                <p data-i18n="rsvp_tagline"></p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
@@ -497,14 +497,14 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email"
+                                                                     placeholder="Email"
                                                                      required>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
+                                                                 data-i18n-placeholder="name"
                                                                  required>
                             </div>
                         </div>
@@ -514,7 +514,7 @@
                             <div class="form-input-group">
                                 <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
                                                                   max="5"
-                                                                  placeholder="Number of guests"
+                                                                  data-i18n-placeholder="guests"
                                                                   required>
                             </div>
                         </div>
